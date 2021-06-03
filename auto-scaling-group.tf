@@ -23,7 +23,7 @@ resource "aws_launch_configuration" "mrw_web_launch_conf" {
   image_id                    = data.aws_ami.amzn2-ami.id
   instance_type               = var.instance_type
   associate_public_ip_address = true
-  key_name                    = "g33kzone-devops"
+  key_name                    = "devops-manish"
   security_groups             = [aws_security_group.allow_http.id]
   user_data                   = file("install_apache.sh")
   lifecycle {
